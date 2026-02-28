@@ -22,24 +22,40 @@ public class Algoritmo
         return true;
     }
 
-    public void BubbleSort(int[] arr)
+    public void QuickSort(int[] arr)
     {
-        int n = arr.Length;
-        for (int i = 0; i < n - 1; i++)
+    QuickSort(arr, 0, arr.Length - 1);
+    }
+
+    private void QuickSort(int[] arr, int bajo, int alto)
+    {
+        if (bajo < alto)
         {
-            bool swapped = false;
-            for (int j = 0; j < n - i - 1; j++)
-            {
-                if (arr[j] > arr[j + 1])
-                {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                    swapped = true;
-                }
-            }
-            if (!swapped)
-                break;
+            int p = Particionar(arr, bajo, alto);
+            QuickSort(arr, bajo, p - 1);
+            QuickSort(arr, p + 1, alto);
         }
     }
-}
+
+    private int Particionar(int[] arr, int bajo, int alto)
+    {
+        int pivote = arr[alto];
+        int i = bajo - 1;
+        for (int j = bajo; j < alto; j++)
+        {
+            if (arr[j] <= pivote)
+            {
+                i++;
+                // Intercambiar arr[i] y arr[j]
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+        // Intercambiar arr[i+1] y arr[alto] (el pivote)
+        int temp2 = arr[i + 1];
+        arr[i + 1] = arr[alto];
+        arr[alto] = temp2;
+        return i + 1;
+    }
+    }
