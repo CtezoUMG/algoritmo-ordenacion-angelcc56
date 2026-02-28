@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AlgoOrder")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e1fe4056440c73ac7dde9219ae5addda3594560")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+014169e536aeab22648cb88f6a5f558693bc899a")]
 [assembly: System.Reflection.AssemblyProductAttribute("AlgoOrder")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AlgoOrder")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
